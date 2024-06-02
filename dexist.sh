@@ -1,6 +1,7 @@
 #/bin/bash
 
-location="/home/sriramrao27/Gujarat"
+echo "enter your location"
+read location
 if [ -d "$location" ]; then
 echo "The Directory Exist"
 else
