@@ -13,6 +13,16 @@ fi
 
 if [ ! -d "$DIRECTORY" ]; then
 echo "not a valid directory"
+exit 1
 else
 echo "valid directory"
+
 fi
+
+echo "Listing files in directory: $DIRECTORY"
+for FILE in "$DIRECTORY"/*; do
+  if [ -f "$FILE" ]; then
+    echo "$(basename "$FILE")"
+  fi
+done
+
